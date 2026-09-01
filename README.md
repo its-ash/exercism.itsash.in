@@ -1,28 +1,40 @@
 # My Exercism Log
 
-A Nuxt.js web app that archives and showcases Exercism coding exercise solutions. Solutions are organized in language folders (`content/solutions/<track>/<exercise>/`) and auto-discovered at build time.
+> A running archive of [Exercism](https://exercism.org) practice exercises — built with Nuxt 3, Tailwind CSS, and Shiki.
+
+**Live site:** [exercism.itsash.in](https://exercism.itsash.in)
+
+| Tracks | Exercises | Solved | Streak |
+| :---: | :---: | :---: | :---: |
+| 1 | 1 | 1 | 1 days |
+
+## JavaScript
+
+Closures, async patterns, array drills.
+
+| # | Exercise | Difficulty | Status | Date |
+| --: | :--- | :---: | :---: | :---: |
+| 1 | [Hello World](https://exercism.itsash.in/tracks/javascript/hello-world) | easy | solved | 2026-09-01 |
 
 ## Stack
-- Nuxt 3 (SSR + static generate)
-- Tailwind CSS (neo-brutalist Exercism-inspired theme)
-- Shiki (syntax highlighting)
-- gray-matter (solution front-matter)
 
-## Structure
-```
-content/solutions/<track>/<exercise>/  ← drop an exercise here
-  solution.*      ← the solved code
-  README.md       ← front-matter: title, difficulty, status, tags
-```
+- Nuxt 3 (SSR + static generate → GitHub Pages)
+- Tailwind CSS — neo-brutalist Exercism-inspired theme
+- Shiki syntax highlighting
+- gray-matter for solution front-matter
 
 ## Develop
+
 ```bash
-npm run dev
+make run
 ```
 
-## Build (static, GitHub Pages-ready)
+## Build & Deploy
+
 ```bash
-npm run generate
+make deploy   # build → docs/ → commit → push
 ```
 
-Output is written to `docs/` (see Makefile) for GitHub Pages.
+---
+
+_This README is regenerated automatically on every `make deploy`._

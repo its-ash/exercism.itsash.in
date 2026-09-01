@@ -7,7 +7,9 @@
         </div>
         <span class="text-sm font-display font-bold text-white">my-exercism-log</span>
       </div>
-      <p class="text-sm text-white/70 font-medium">Solutions archived for learning, not submission.</p>
+      <p class="text-sm text-white/70 font-medium">
+        Built by <a href="https://its-ash.github.io" target="_blank" rel="noopener noreferrer" class="text-white font-bold hover:text-yellow underline decoration-2 underline-offset-2">its-ash.github.io</a> — Solutions archived for learning, not submission.
+      </p>
     </div>
   </footer>
 </template>

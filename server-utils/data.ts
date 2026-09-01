@@ -368,6 +368,9 @@ export async function buildSiteData(): Promise<SiteData> {
   // Write static SEO files into public/
   writeStaticSeo(data);
 
+  // Regenerate the project README with the latest solution list
+  writeReadme(data);
+
   return data;
 }
 
@@ -421,6 +424,64 @@ ${items}
   </channel>
 </rss>`;
   writeFileSync(join(publicDir, 'rss.xml'), rss, 'utf-8');
+}
+
+function writeReadme(data: SiteData) {
+  const root = resolve(process.cwd());
+  const tracks = [...data.tracks].sort((a, b) => a.name.localeCompare(b.name));
+
+  const lines: string[] = [
+    '# My Exercism Log',
+    '',
+    `> A running archive of [Exercism](https://exercism.org) practice exercises — built with Nuxt 3, Tailwind CSS, and Shiki.`,
+    '',
+    `**Live site:** [${SITE_URL.replace(/^https:\/\//, '')}](${SITE_URL})`,
+    '',
+    `| Tracks | Exercises | Solved | Streak |`,
+    `| :---: | :---: | :---: | :---: |`,
+    `| ${data.stats.totalTracks} | ${data.stats.totalExercises} | ${data.stats.totalSolutions} | ${data.stats.streakDays} days |`,
+    '',
+  ];
+
+  for (const track of tracks) {
+    lines.push(`## ${track.name}`);
+    lines.push('');
+    lines.push(track.blurb);
+    lines.push('');
+    lines.push(`| # | Exercise | Difficulty | Status | Date |`);
+    lines.push(`| --: | :--- | :---: | :---: | :---: |`);
+    track.solutions.forEach((s, i) => {
+      const url = `${SITE_URL}${s.url}`;
+      lines.push(`| ${i + 1} | [${s.title}](${url}) | ${s.difficulty} | ${s.status} | ${s.date} |`);
+    });
+    lines.push('');
+  }
+
+  lines.push('## Stack');
+  lines.push('');
+  lines.push('- Nuxt 3 (SSR + static generate → GitHub Pages)');
+  lines.push('- Tailwind CSS — neo-brutalist Exercism-inspired theme');
+  lines.push('- Shiki syntax highlighting');
+  lines.push('- gray-matter for solution front-matter');
+  lines.push('');
+  lines.push('## Develop');
+  lines.push('');
+  lines.push('```bash');
+  lines.push('make run');
+  lines.push('```');
+  lines.push('');
+  lines.push('## Build & Deploy');
+  lines.push('');
+  lines.push('```bash');
+  lines.push('make deploy   # build → docs/ → commit → push');
+  lines.push('```');
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push(`_This README is regenerated automatically on every \`make deploy\`._`);
+  lines.push('');
+
+  writeFileSync(join(root, 'README.md'), lines.join('\n'), 'utf-8');
 }
 
 export function loadSiteData(): SiteData {
