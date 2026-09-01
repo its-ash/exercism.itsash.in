@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Exercism Log</title>
+    <link>https://my-exercism-log.example.com</link>
+    <atom:link href="https://my-exercism-log.example.com/rss.xml" rel="self" type="application/rss+xml" />
+    <description>A running archive of Exercism practice exercises.</description>
+    <language>en</language>
+    <item>
+      <title>Hello World — javascript</title>
+      <link>https://my-exercism-log.example.com/tracks/javascript/hello-world</link>
+      <guid>https://my-exercism-log.example.com/tracks/javascript/hello-world</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Hello World (javascript, easy) — solved. Tags: </description>
+    </item>
+  </channel>
+</rss>
