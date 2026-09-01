@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Exercism Solutions</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; }
+  .accent-purple { background-color: #5D3FD3; }
+  .accent-purple-light { background-color: #EDE9FE; }
+  .accent-green { background-color: #1A8F5E; }
+  .accent-yellow { background-color: #F5A623; }
+  .accent-blue { background-color: #2563EB; }
+  .accent-red { background-color: #DC2626; }
+  .accent-teal { background-color: #0D9488; }
+  .accent-pink { background-color: #DB2777; }
+</style>
+</head>
+<body class="bg-white text-black">
+
+  <!-- Nav -->
+  <header class="border-b border-black/10 sticky top-0 bg-white/95 backdrop-blur z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg accent-purple flex items-center justify-center">
+          <span class="text-white text-sm font-bold">E</span>
+        </div>
+        <span class="font-bold text-lg tracking-tight">my-exercism-log</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#" class="hover:opacity-60">Overview</a>
+        <a href="#" class="hover:opacity-60">Languages</a>
+        <a href="#" class="hover:opacity-60">All Solutions</a>
+        <a href="#" class="hover:opacity-60">About</a>
+      </nav>
+      <a href="#" class="hidden sm:inline-flex items-center rounded-full bg-black text-white text-sm font-semibold px-5 py-2 hover:opacity-80">
+        Follow along
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-12 sm:pt-24 sm:pb-16">
+    <div class="max-w-2xl">
+      <p class="text-sm font-bold tracking-widest uppercase text-black/50 mb-4">Public solution log</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight mb-6">
+        Every exercise I solve,<br class="hidden sm:block" /> organized by language.
+      </h1>
+      <p class="text-base sm:text-lg text-black/60 leading-relaxed mb-8">
+        A running archive of Exercism practice exercises. Each solved problem lands in its
+        language folder below — pulled in, refactored, and documented for anyone following along.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#tracks" class="inline-flex items-center rounded-full accent-purple text-white text-sm font-semibold px-6 py-3 hover:opacity-90">
+          Browse languages
+        </a>
+        <a href="#recent" class="inline-flex items-center rounded-full border-2 border-black text-black text-sm font-semibold px-6 py-3 hover:bg-black hover:text-white">
+          Latest solutions
+        </a>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16">
+      <div class="rounded-2xl border border-black/10 p-6">
+        <p class="text-3xl font-extrabold">128</p>
+        <p class="text-sm text-black/50 mt-1">Exercises solved</p>
+      </div>
+      <div class="rounded-2xl border border-black/10 p-6">
+        <p class="text-3xl font-extrabold">6</p>
+        <p class="text-sm text-black/50 mt-1">Languages active</p>
+      </div>
+      <div class="rounded-2xl border border-black/10 p-6">
+        <p class="text-3xl font-extrabold">42</p>
+        <p class="text-sm text-black/50 mt-1">Day streak</p>
+      </div>
+      <div class="rounded-2xl border border-black/10 p-6">
+        <p class="text-3xl font-extrabold">9</p>
+        <p class="text-sm text-black/50 mt-1">Followers</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Language folders -->
+  <section id="tracks" class="max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-16 border-t border-black/10">
+    <div class="flex items-end justify-between mb-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Language folders</h2>
+      <a href="#" class="text-sm font-semibold underline hover:opacity-60 hidden sm:inline">View all</a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- JavaScript -->
+      <a href="#" class="group rounded-2xl border border-black/10 p-6 hover:border-black transition-colors">
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-12 h-12 rounded-xl accent-yellow flex items-center justify-center">
+            <span class="text-black font-extrabold text-lg">JS</span>
+          </div>
+          <span class="text-xs font-bold tracking-widest uppercase text-black/40">32 solved</span>
+        </div>
+        <h3 class="text-lg font-bold mb-1">JavaScript</h3>
+        <p class="text-sm text-black/50 mb-4">Closures, async patterns, array drills.</p>
+        <div class="w-full h-2 rounded-full bg-black/5 overflow-hidden">
+          <div class="h-full accent-yellow rounded-full" style="width:64%"></div>
+        </div>
+      </a>
+
+      <!-- Python -->
+      <a href="#" class="group rounded-2xl border border-black/10 p-6 hover:border-black transition-colors">
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-12 h-12 rounded-xl accent-blue flex items-center justify-center">
+            <span class="text-white font-extrabold text-lg">Py</span>
+          </div>
+          <span class="text-xs font-bold tracking-widest uppercase text-black/40">28 solved</span>
+        </div>
+        <h3 class="text-lg font-bold mb-1">Python</h3>
+        <p class="text-sm text-black/50 mb-4">Data structures and generator practice.</p>
+        <div class="w-full h-2 rounded-full bg-black/5 overflow-hidden">
+          <div class="h-full accent-blue rounded-full" style="width:52%"></div>
+        </div>
+      </a>
+
+      <!-- Ruby -->
+      <a href="#" class="group rounded-2xl border border-black/10 p-6 hover:border-black transition-colors">
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-12 h-12 rounded-xl accent-red flex items-center justify-center">
+            <span class="text-white font-extrabold text-lg">Rb</span>
+          </div>
+          <span class="text-xs font-bold tracking-widest uppercase text-black/40">19 solved</span>
+        </div>
+        <h3 class="text-lg font-bold mb-1">Ruby</h3>
+        <p class="text-sm text-black/50 mb-4">Blocks, modules, and metaprogramming.</p>
+        <div class="w-full h-2 rounded-full bg-black/5 overflow-hidden">
+          <div class="h-full accent-red rounded-full" style="width:38%"></div>
+        </div>
+      </a>
+
+      <!-- Go -->
+      <a href="#" class="group rounded-2xl border border-black/10 p-6 hover:border-black transition-colors">
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-12 h-12 rounded-xl accent-teal flex items-center justify-center">
+            <span class="text-white font-extrabold text-lg">Go</span>
+          </div>
+          <span class="text-xs font-bold tracking-widest uppercase text-black/40">21 solved</span>
+        </div>
+        <h3 class="text-lg font-bold mb-1">Go</h3>
+        <p class="text-sm text-black/50 mb-4">Goroutines, channels, interfaces.</p>
+        <div class="w-full h-2 rounded-full bg-black/5 overflow-hidden">
+          <div class="h-full accent-teal rounded-full" style="width:42%"></div>
+        </div>
+      </a>
+
+      <!-- Rust -->
+      <a href="#" class="group rounded-2xl border border-black/10 p-6 hover:border-black transition-colors">
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-12 h-12 rounded-xl accent-pink flex items-center justify-center">
+            <span class="text-white font-extrabold text-lg">Rs</span>
+          </div>
+          <span class="text-xs font-bold tracking-widest uppercase text-black/40">15 solved</span>
+        </div>
+        <h3 class="text-lg font-bold mb-1">Rust</h3>
+        <p class="text-sm text-black/50 mb-4">Ownership, borrowing, lifetimes.</p>
+        <div class="w-full h-2 rounded-full bg-black/5 overflow-hidden">
+          <div class="h-full accent-pink rounded-full" style="width:30%"></div>
+        </div>
+      </a>
+
+      <!-- Add language ghost card -->
+      <div class="rounded-2xl border-2 border-dashed border-black/15 p-6 flex flex-col items-center justify-center text-center min-h-[176px]">
+        <div class="w-12 h-12 rounded-xl border-2 border-dashed border-black/20 flex items-center justify-center mb-4">
+          <span class="text-black/30 font-extrabold text-xl">+</span>
+        </div>
+        <p class="text-sm font-semibold text-black/40">More tracks coming</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Recent solutions -->
+  <section id="recent" class="max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-16 border-t border-black/10">
+    <div class="flex items-end justify-between mb-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Latest solutions</h2>
+      <a href="#" class="text-sm font-semibold underline hover:opacity-60 hidden sm:inline">View all</a>
+    </div>
+
+    <div class="divide-y divide-black/10 border-y border-black/10">
+
+      <div class="flex items-center justify-between gap-4 py-5">
+        <div class="flex items-center gap-4 min-w-0">
+          <div class="w-10 h-10 shrink-0 rounded-lg accent-yellow flex items-center justify-center">
+            <span class="text-black font-extrabold text-xs">JS</span>
+          </div>
+          <div class="min-w-0">
+            <p class="font-bold truncate">Two Fer</p>
+            <p class="text-sm text-black/50 truncate">JavaScript &middot; Easy</p>
+          </div>
+        </div>
+        <span class="text-xs font-bold tracking-widest uppercase accent-green text-white rounded-full px-3 py-1 shrink-0">Solved</span>
+      </div>
+
+      <div class="flex items-center justify-between gap-4 py-5">
+        <div class="flex items-center gap-4 min-w-0">
+          <div class="w-10 h-10 shrink-0 rounded-lg accent-blue flex items-center justify-center">
+            <span class="text-white font-extrabold text-xs">Py</span>
+          </div>
+          <div class="min-w-0">
+            <p class="font-bold truncate">High Scores</p>
+            <p class="text-sm text-black/50 truncate">Python &middot; Easy</p>
+          </div>
+        </div>
+        <span class="text-xs font-bold tracking-widest uppercase accent-green text-white rounded-full px-3 py-1 shrink-0">Solved</span>
+      </div>
+
+      <div class="flex items-center justify-between gap-4 py-5">
+        <div class="flex items-center gap-4 min-w-0">
+          <div class="w-10 h-10 shrink-0 rounded-lg accent-teal flex items-center justify-center">
+            <span class="text-white font-extrabold text-xs">Go</span>
+          </div>
+          <div class="min-w-0">
+            <p class="font-bold truncate">Space Age</p>
+            <p class="text-sm text-black/50 truncate">Go &middot; Medium</p>
+          </div>
+        </div>
+        <span class="text-xs font-bold tracking-widest uppercase accent-green text-white rounded-full px-3 py-1 shrink-0">Solved</span>
+      </div>
+
+      <div class="flex items-center justify-between gap-4 py-5">
+        <div class="flex items-center gap-4 min-w-0">
+          <div class="w-10 h-10 shrink-0 rounded-lg accent-red flex items-center justify-center">
+            <span class="text-white font-extrabold text-xs">Rb</span>
+          </div>
+          <div class="min-w-0">
+            <p class="font-bold truncate">Robot Name</p>
+            <p class="text-sm text-black/50 truncate">Ruby &middot; Medium</p>
+          </div>
+        </div>
+        <span class="text-xs font-bold tracking-widest uppercase accent-green text-white rounded-full px-3 py-1 shrink-0">Solved</span>
+      </div>
+
+      <div class="flex items-center justify-between gap-4 py-5">
+        <div class="flex items-center gap-4 min-w-0">
+          <div class="w-10 h-10 shrink-0 rounded-lg accent-pink flex items-center justify-center">
+            <span class="text-white font-extrabold text-xs">Rs</span>
+          </div>
+          <div class="min-w-0">
+            <p class="font-bold truncate">Fizzy Simulation</p>
+            <p class="text-sm text-black/50 truncate">Rust &middot; Hard</p>
+          </div>
+        </div>
+        <span class="text-xs font-bold tracking-widest uppercase accent-yellow text-black rounded-full px-3 py-1 shrink-0">In progress</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-black/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-md accent-purple flex items-center justify-center">
+          <span class="text-white text-xs font-bold">E</span>
+        </div>
+        <span class="text-sm font-semibold">my-exercism-log</span>
+      </div>
+      <p class="text-sm text-black/40">Solutions archived for learning, not submission.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

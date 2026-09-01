@@ -1,0 +1,23 @@
+{
+  "name": "my-exercism-log",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev --no-fork",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.14.0",
+    "vue": "^3.5.0",
+    "vue-router": "^4.4.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "gray-matter": "^4.0.3",
+    "shiki": "^1.22.0"
+  }
+}

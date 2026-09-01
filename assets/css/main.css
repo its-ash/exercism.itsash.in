@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --purple: #5624d0;
+  --purple-dark: #3b1a96;
+  --coral: #ff6847;
+  --teal: #00c2a8;
+  --yellow: #ffc94a;
+  --pink: #ff4d94;
+  --blue: #2f8fff;
+  --cream: #fff8ec;
+  --ink: #1b1a21;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-ink font-sans antialiased overflow-x-hidden;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Poppins', 'Source Sans 3', sans-serif;
+}
+
+/* Sticker — neo-brutalist card with hard shadow */
+.sticker {
+  @apply border-[3px] border-ink shadow-sticker transition-[transform,box-shadow] duration-150;
+}
+.sticker:hover {
+  @apply -translate-x-[3px] -translate-y-[3px] shadow-sticker-hover;
+}
+.sticker-sm {
+  @apply border-[3px] border-ink shadow-sticker-sm transition-[transform,box-shadow] duration-150;
+}
+.sticker-sm:hover {
+  @apply -translate-x-[3px] -translate-y-[3px] shadow-sticker-sm-hover;
+}
+
+/* Shiki code block */
+.shiki {
+  @apply rounded-2xl border-[3px] border-ink shadow-sticker-sm overflow-x-auto;
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+.shiki,
+.shiki pre,
+.shiki code {
+  font-family: inherit;
+}
+.shiki pre {
+  @apply p-5 m-0 bg-cream;
+}
+.shiki code {
+  @apply block;
+}
+
+/* Rendered Exercism instructions markdown */
+.prose-exercism h1 { @apply font-display text-2xl font-extrabold mt-6 mb-3; }
+.prose-exercism h2 { @apply font-display text-xl font-bold mt-6 mb-3; }
+.prose-exercism h3 { @apply font-display text-lg font-bold mt-4 mb-2; }
+.prose-exercism p { @apply mb-4; }
+.prose-exercism strong { @apply font-bold text-ink; }
+.prose-exercism em { @apply italic; }
+.prose-exercism code {
+  @apply font-mono text-base font-semibold bg-ink/5 px-1.5 py-0.5 rounded border border-ink/10;
+}
+.prose-exercism a { @apply text-purple underline decoration-2 underline-offset-2 hover:text-coral; }
+.prose-exercism ul { @apply list-disc pl-6 mb-4 space-y-1; }
+.prose-exercism li { @apply leading-relaxed; }
